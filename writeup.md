@@ -42,6 +42,8 @@ It has only one single straight line for the left lane and another for the right
 
 The top of the lanes are currently based on the average slope, but I am using an arbitrary height. This means that going up/down hills or making turns will make the lane tracking unreliable.
 
+Another potential shortcomming with the current pipeline is speed. The time it takes to process the videos and write them is slow. The del operations used on the memory of slopes and intercepts is also inefficient. At a O[n] and potentially tens of deletions that are required for any given frame, it would likely be way too slow for real-world situations. It is hard to tell the actual delay without running the code live on real hardware.
+
 
 ### 3. Suggest possible improvements to your pipeline
 
